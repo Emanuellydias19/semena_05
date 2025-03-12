@@ -227,9 +227,25 @@ function somaArray(numeros) {
 }
 console.log(somaArray([1, 2, 3, 4]));
 ```
-Primeiro erro, é **numeros.size**, sendo o correto, numeros.length
 
-soma*2 + numeros
+# **Correção do código: **
+
+```javascript
+function somaArray(numeros) {
+
+    let soma = 0;
+    for (i = 0; i < numeros.length; i++) {
+        soma += numeros[i]*2;
+    }
+    return soma;
+}
+console.log(somaArray([1, 2, 3, 4]));
+```
+
+
+Primeiro erro, é **numeros.size**, sendo o correto, **numeros.length**
+
+
 
 ____
 10) Crie um exemplo prático no qual você tenha duas classes:
