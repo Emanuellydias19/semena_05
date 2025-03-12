@@ -30,6 +30,7 @@ c) A saída será undefined seguido de undefined
 
 d) A saída será erro em ambas as linhas que utilizam console.log
 
+A resposta é a letra a). Ambas as variaveis precisariam estar definidas antes do console.log, dessa forma, ele conseguiria puxar a variavel e mostrar algo na tela. Como ambas variaveis foram definidas depois, o console.log não identifica elas, e nem define o valor certo no visor. A variavel x é global, é como se a variavel y não existisse. 
 
 **2) O seguinte código JavaScript tem um erro que impede sua execução correta. Analise e indique a opção que melhor corrige o problema. Justifique sua resposta.**
 
@@ -50,6 +51,10 @@ b) Substituir if (a || b === 0) por if (a === 0 && b === 0)
 c) Substituir if (a || b === 0) por if (a && b === 0)
 
 d) Remover completamente a verificação if (a || b === 0)
+
+Resposta letra a). Porque **(a || b === 0)**, nesse caso a **var a**, está sendo analizado separadamente de b===0, o código não verifica a variavel **a**, só esta verificando a **var b**, portanto a saída nesse caso seria 2, mesmo se **var a** fosse 0. A melhor forma de resolver esse problema é agregando **a === 0**, assim **ambas as variaveis serão verificadas** corretamente. 
+
+
 
 ______
 **3) Ao executar esse código, qual será a saída no console? Indique a alternativa correta e justifique sua resposta.**
