@@ -89,6 +89,8 @@ c) O código imprime 50.
 
 d) O código gera um erro.
 
+
+A resposta é a letra b). Na minha primeira analise, ponderei que fosse 1000, porem revendo a estrutura do código é possivel reparar a falta do break, e sem o break ele continua imprimindo as variaveis até o proximo case, com break.
 ______
 **4) Ao executar esse código, qual será a saída no console? Indique a alternativa correta e justifique sua resposta.**
 ```javascript
@@ -121,10 +123,18 @@ b) ["banana", "abacaxi", "manga"]
 c) ["banana", "abacaxi", "manga", "laranja"]
 
 d) ["banana", "maçã", "uva", "abacaxi", "manga"]
+
+**A resposta é a letra c)**. Nesse caso **splice()**, serve para remover/substituir elementos existentes, não existentes e como nesse caso, adicionando dois elementos ao array.  EM **lista.splice(1, 2)** o primeiro numero remete à **posição** que ele substitui e o segundo numero remete sobre **quantos elementos do array serão substituidos**. 
+
+let lista = ["banana", **"maçã", "uva"** "laranja"]; // nesse caso maça está na primeira posição.
+lista.splice(1, 2, "abacaxi", "manga"); // E como foi pedido aqui, no segundo numero o valor sendo 2. Ele quer que dois elementos do array sejam substituídos. 
+
+Portanto ao imprimir a lista os elementos que aparecem no console são **"Maça, abacaxi, manga, uva".**
 ______
 **6) Abaixo há duas afirmações sobre herança em JavaScript. Indique a alternativa correta e justifique sua resposta**
 
 I. A herança é utilizada para compartilhar métodos e propriedades entre classes em JavaScript, permitindo que uma classe herde os métodos de outra sem a necessidade de repetir código.  
+
 II. Em JavaScript, a herança é implementada através da palavra-chave `extends`.
 
 
@@ -135,6 +145,12 @@ b) As duas afirmações são verdadeiras, mas a segunda não justifica a primeir
 c) A primeira afirmação é verdadeira, e a segunda é falsa.
 
 d) A primeira afirmação é falsa, e a segunda é verdadeira.
+
+A Resposta é a letra b). 
+No contexto da herança, a classe filho é chamada de "subclasse" ou "classe derivada", e a classe pai é chamada de "superclasse" ou "classe base".
+
+
+
 ______
 **7) Dado o seguinte código. Indique a alternativa correta e justifique sua resposta.**
 
@@ -193,22 +209,29 @@ c) A asserção é verdadeira e a razão é verdadeira, mas a razão não explic
 
 d) A asserção é verdadeira e a razão é verdadeira, e a razão explica a asserção.
 
+Resposta letra c). Ambas estão corretas, a assercão é verdadeira, e a razão é verdadeira, no entanto a proposição de razão não justifica a proposição de asserção, ela não explica o nivel teorico do que é polimorfismo. 
+A sobrecarga deve ser usada quando a mesma ação será realizada com dados de entrada diferentes, e portanto de formas ligeiramente diferentes.
+
 ______
 
 # Questões dissertativas
-9) O seguinte código deve retornar a soma do dobro dos números de um array, mas contém erros. Identifique os problema e corrija o código para que funcione corretamente. Adicione comentários ao código explicado sua solução para cada problema.
+9) O seguinte código deve retornar a soma do dobro dos números de um array, mas contém erros. Identifique os problemas e corrija o código para que funcione corretamente. Adicione comentários ao código explicado sua solução para cada problema.
 
 ```javascript
 function somaArray(numeros) {
 
     for (i = 0; i < numeros.size; i++) {
-        soma = 2*numeros[i];
+        soma = (2*numeros[i]);
     }
     return soma;
 }
 console.log(somaArray([1, 2, 3, 4]));
 ```
-______
+Primeiro erro, é **numeros.size**, sendo o correto, numeros.length
+
+soma*2 + numeros
+
+____
 10) Crie um exemplo prático no qual você tenha duas classes:
 
 - Uma classe `Produto` com atributos `nome` e `preco`, e um método `calcularDesconto()` que aplica um desconto fixo de 10% no preço do produto.
