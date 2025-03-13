@@ -315,7 +315,7 @@ class Produto {
     }
 
     calcularDesconto() {
-        return this.preco - (this.preco * (10/100))
+        return this.preco - (this.preco *(10/100))
     }
 }
 
@@ -325,13 +325,17 @@ class Livro extends Produto {
     }
 
     calcularDesconto() {
-        return this.preco - (this.preco * 20/100)
+        return this.preco - (this.preco*(20/100))
     }
 }
 
 livro = new Livro('Livro', 100)
 console.log(livro.calcularDesconto())
+
+produto = new Produto('Produto', 100)
+console.log(produto.calculoDesconto())
+
 ```
 
-**Resposta:** A herança é um recurso que permite criar um objeto especial com base em outro, os objetos são chamados com protype, mínima quantidade que precisa ser herdada é um objeto para cada objeto. Com a herança conseguimos otimizar o código. Além de permitir a criação de subclasse, a modificando especificamente sem adulterar a classe base. 
+**Resposta:** A herança é um recurso que permite criar um objeto especial com base em outro, os objetos são chamados com protype, a quantidade mínima que precisa ser herdada é um objeto para cada objeto. Com a herança conseguimos **otimizar o código**. Além de permitir a criação de subclasse, a **modificando** especificamente a subclasse **sem adulterar a classe base.** Para implementar o método livro, refiz a função, calcularDesconto(),   multipicando por 20, dividindo por 100. 
 
